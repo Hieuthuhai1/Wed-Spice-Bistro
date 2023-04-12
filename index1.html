@@ -15,19 +15,19 @@
 			<div class="navfull">
 				<nav>
 					<ul>
-						<li><a style="color: #f07305;" href="#">Trang chủ</a></li>
+						<li><a style="color: #f07305;" href="http://127.0.0.1:5500/spice%20bistro/index1.html">Trang chủ</a></li>
 						<li><a href="http://127.0.0.1:5500/spice%20bistro/index2.html">Về Spice Bistro</a></li>
-						<li><a href="">Dùng bữa tại Spice Bistro</a>
+						<li><a href="http://127.0.0.1:5500/spice%20bistro/index3.1.html">Dùng bữa tại Spice Bistro</a>
 							<div class="cover-navbar">
 								<ul class="navbar" >
-									<li><a style="padding-top: 25px;" href="">Món ăn</a></li>
-									<li><a href="">Thức uống</a></li>
+									<li><a style="padding-top: 25px;" href="http://127.0.0.1:5500/spice%20bistro/index3.1.html">Món ăn</a></li>
+									<li><a href="http://127.0.0.1:5500/spice%20bistro/index3.2.html">Thức uống</a></li>
 								</ul>
 							</div>
 						</li>
-						<li><a href="">Đưa Spice Bistro Về nhà</a></li>
-						<li><a href="">Địa Điểm</a></li>
-						<li><a href="">Đặt Bàn</a></li>
+						<li><a href="http://127.0.0.1:5500/spice%20bistro/index4.html">Đưa Spice Bistro Về nhà</a></li>
+						<li><a href="http://127.0.0.1:5500/spice%20bistro/index5.html">Địa Điểm</a></li>
+						<li><a href="http://127.0.0.1:5500/spice%20bistro/index6.html">Đặt Bàn</a></li>
 					</ul>
 				</nav>
 				<img src="./Asses/image/la-co-vuong-quoc-anh.jpg" alt="">
@@ -74,7 +74,7 @@
 				<img src="./Asses/image/19.jpg" alt="">
 				<img src="./Asses/image/20.jpg" alt="">
 				<img src="./Asses/image/21.jpg" alt="">
-				<img   src="./Asses/image/22.jpg" alt="">
+				<img src="./Asses/image/22.jpg" alt="">
 				<img src="./Asses/image/23.jpg" alt="">
 				<img src="./Asses/image/24.jpg" alt="">	
 				</div>
@@ -105,7 +105,7 @@
 									color: rgba(0,0,0,.73)" ><b>32 D11, phường Thảo Điền, quận 2
 										0899 189 218</b></p>
 
-										<a href="https://www.spicebistro.vn/vi/book-a-table">Đặt bàn ngay</a>
+										<a href="http://127.0.0.1:5500/spice%20bistro/index6.html">Đặt bàn ngay</a>
 								</div>
 							</div>
 						</article>
@@ -118,7 +118,7 @@
 									<p style="
 									color: rgba(0,0,0,.73)" ><b>34 Võ Văn Tần, phường Võ Thị Sáu, quận 3</b></p>
 
-								<a href="https://www.spicebistro.vn/vi/book-a-table">Sắp mở cửa đón khách</a>
+								<a href="http://127.0.0.1:5500/spice%20bistro/index6.html">Sắp mở cửa đón khách</a>
 								</div>
 							</div>
 						</article>
@@ -149,35 +149,31 @@
 			</div>
 		</footer>
 	</div>
+	<script>
+		// Hàm thay đổi ảnh
+		function changeImage(arr, el) {
+			let index = el.getAttribute('data-slide-index') ? el.getAttribute('data-slide-index') : 0
+			if(index == arr.length-1) index = 0;
+			else index++
+			el.src = arr[index]; // Thay đổi đường dẫn ảnh
+			el.setAttribute('data-slide-index', index)
+		}
+
+		var imgArray = ["./Asses/image/26.jpg","./Asses/image/27.jpg","./Asses/image/28.jpg","./Asses/image/29.jpg" ]; // Mảng chứa đường dẫn của các hình ảnh
+		var imgElement = document.getElementById("myImage1"); // Lấy đối tượng ảnh từ HTML
+
+		// Thiết lập thời gian đổi ảnh (ở đây là 4 giây)
+		setInterval("changeImage(imgArray, imgElement)", 4000);
+
+		var imgArray2 = ["./Asses/image/30.jpg","./Asses/image/31.jpg", "./Asses/image/32.jpg","./Asses/image/33.jpg" ]; // Mảng chứa đường dẫn của các hình ảnh
+		var imgElement2 = document.getElementById("myImage2"); // Lấy đối tượng ảnh từ HTML
+
+		// Thiết lập thời gian đổi ảnh (ở đây là 4 giây)
+		setInterval("changeImage(imgArray2, imgElement2)", 4000);
+
+	</script>
 </body>
-	<script>
-		var imgArray = [src="./Asses/image/26.jpg",src="./Asses/image/27.jpg",src="./Asses/image/28.jpg",src="./Asses/image/29.jpg" ]; // Mảng chứa đường dẫn của các hình ảnh
-var imgIndex = 0; // Chỉ mục của hình ảnh hiện tại
-var imgElement = document.getElementById("myImage1"); // Lấy đối tượng ảnh từ HTML
+	<!-- <script>
 
-// Hàm thay đổi ảnh
-function changeImage() {
-  imgIndex = (imgIndex + 1) % imgArray.length; // Tăng chỉ mục và kiểm tra nếu vượt quá kích thước mảng
-  imgElement.src = imgArray[imgIndex]; // Thay đổi đường dẫn ảnh
-}
-
-// Thiết lập thời gian đổi ảnh (ở đây là 4 giây)
-setInterval(changeImage, 4000);
-
-	</script>
-	<script>
-		var imgArray = [src="./Asses/image/30.jpg",src="./Asses/image/31.jpg",src="./Asses/image/32.jpg",src="./Asses/image/33.jpg" ]; // Mảng chứa đường dẫn của các hình ảnh
-var imgIndex = 0; // Chỉ mục của hình ảnh hiện tại
-var imgElement = document.getElementById("myImage2"); // Lấy đối tượng ảnh từ HTML
-
-// Hàm thay đổi ảnh
-function changeImage() {
-  imgIndex = (imgIndex + 1) % imgArray.length; // Tăng chỉ mục và kiểm tra nếu vượt quá kích thước mảng
-  imgElement.src = imgArray[imgIndex]; // Thay đổi đường dẫn ảnh
-}
-
-// Thiết lập thời gian đổi ảnh (ở đây là 4 giây)
-setInterval(changeImage, 4000);
-
-	</script>
+	</script> -->
 </html>
